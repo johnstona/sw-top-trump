@@ -1,3 +1,5 @@
+import { tsBigIntKeyword } from "@babel/types";
+
 const BASE_URL = 'https://swapi.co/api'
 
 const PEOPLE_URL = `${BASE_URL}/people`
@@ -28,6 +30,8 @@ newStarshipsGameButton.addEventListener('click', () => newGame('starships'))
 // New Game function depending on type of game
 
 const newGame = (type) => {
+  let title = document.querySelector('#game-title')
+  title.innerText = `New ${type} game!`
   newPeopleGameButton.disabled = true
   newStarshipsGameButton.disabled = true
   nextCardButton.classList.remove('invisible')
