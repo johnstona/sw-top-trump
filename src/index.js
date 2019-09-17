@@ -151,13 +151,15 @@ const select = (option) => {
   })
   const lastResult = document.querySelector('#last-result')
   nextCardButton.disabled = false
-  if (parseInt(player1Current[option]) > parseInt(player2Current[option])) {
+  let player1Result = parseInt(player1Current[option].replace(/,/g, ""))
+  let player2Result = parseInt(player2Current[option].replace(/,/g, ""))
+  if (player1Result > player2Result) {
     lastResult.innerText = 'Victory!'
     player1Score += 1
-  } else if (parseInt(player1Current[option]) < parseInt(player2Current[option])) {
+  } else if (player1Result < player2Result) {
     lastResult.innerText = 'Loss!'
     player2Score += 1
-  } else if (parseInt(player1Current[option]) === parseInt(player2Current[option])) {
+  } else if (player1Result === player2Result) {
     lastResult.innerText = 'Draw!'
   } else {
     window.alert('Something went wrong!')
