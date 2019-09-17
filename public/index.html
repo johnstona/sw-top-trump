@@ -5,27 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../src/index.css">
   <title>Star Wars Top Trumps</title>
 </head>
 <body>
-  <div class='card' id='player-card'>
-      <div class="card-body">
-          <h5 id="player-card-title" class="card-title">Player Card</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="row">
+        <div class="col-sm-6">
+  <div class='card w-50' id='player1-card'>
+    <h5 id="player-card-title" class="card-title">Your Card</h5>
+      <div class="card-body" id='player1-card-body'>
         </div>
       </div>
-
-      <div class='card' id='opponent-card'>
-          <div class="card-body">
-              <h5 class="card-title">Opponent Card</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+      <div class="col-sm-6">
+      <div class='card w-50' id='player2-card'>
+          <h5 id="opponent-card-title" class="card-title">Opponent Card</h5>
+          <div class="card-body invisible" id='player2-card-body'>
             </div>
           </div>
-      
+        </div>
+    </div>
+
+      <div>
+    
+      <button type="button" id="next-card-button" class="btn btn-secondary invisible">Next Card</button>
+    </div>
       <button type="button" id="new-people-button" class="btn btn-success">New People Game</button>
       <button type="button" id="new-starships-button" class="btn btn-primary">New Starship Game</button>
+  <div>
+    Last Result:
+    <p id='last-result'></p>
+  </div>
+  <div>
+    Your score:
+    <div id='player1-score'>
+      0
+    </div>
+  </div>
+  <div>
+    Their score:
+    <div id='player2-score'>
+      0
+    </div>
+  </div>
   
   
 </body>
