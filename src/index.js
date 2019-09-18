@@ -1,5 +1,3 @@
-import { tsBigIntKeyword } from "@babel/types";
-
 const BASE_URL = 'https://swapi.co/api'
 
 const PEOPLE_URL = `${BASE_URL}/people`
